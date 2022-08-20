@@ -1,0 +1,301 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #333;
+    font-size: 1rem;
+    font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    max-width: 1200px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+
+/* ---header-- */
+.header{
+    background-color: #fff;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 10;
+}
+
+
+.site-title{
+    line-height: 1px;
+    max-width: 1200px;
+    padding: 20px 16px;
+    margin:0 auto;
+}
+
+.navi{
+    background-color: #333;
+}
+
+.navi a{
+    color: #fff;
+}
+
+.naviList{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    margin:0 auto;
+}
+
+.naviItem{
+    font-size: 0.875rem;
+    padding: 10px 60px 10px 0;
+}
+
+/* ---pickup-- */
+.pickup{
+    margin-top: 140px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+}
+
+.pickup .article{
+    width:32%;
+}
+
+.pickupText{
+    font: size 1rem;
+    font-weight: bold;
+}
+.readmore{
+    text-align: center;
+}
+
+.readmore a {
+    position:relative;
+}
+
+.readmore a::after {
+    content: '';
+    position: absolute;
+    background: #333;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+}
+
+.readmore a:hover::after {
+    opacity: 0;
+}
+
+
+/* ---container--- */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+/* ---main--- */
+
+.main{
+    width: 65%;
+}
+
+.mainArticle{
+    margin-bottom: 80px;
+}
+
+.articleList{
+    display: flex;
+    justify-content: flex-start;
+    padding-inline-start: 0;
+}
+
+.articleItem{
+    padding-right: 20px;
+}
+
+.articleText{
+    padding: 10px 40px 30px;
+}
+
+/* ---aside--- */
+.aside{
+    width: 30%;
+    padding: 20px;
+}
+
+.sectoinProfile{
+    text-align: center;
+}
+
+.profilePic{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.profileName{
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profileText{
+    text-align:left;
+    font-size: 0.825rem;
+}
+
+.asideTitle{
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rankingArticle{
+    margin-bottom: 30px;
+}
+
+.rankingText{
+    font-size: 0.825rem;
+    margin:0;
+}
+
+.archiveList{
+    padding: 0;
+}
+
+.archiveItem{
+    font-size: 0.875rem;
+    padding: 20px;
+    border-top: solid  1px #777;
+    text-align: left;
+}
+.archiveItem:last-child{
+    border-bottom: solid  1px #777;
+}
+
+
+/* ---footer--- */
+.footer{
+    background-color: #f7f7f7;
+}
+
+.fotterContent{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footerSection{
+    width: 30%;
+}
+
+.footerTitle{
+    margin-bottom: 30px;
+}
+
+.triangle{
+    position: relative;
+    padding-left: 12px;
+    padding-bottom: 5px;
+}
+
+
+.triangle::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 8px;
+    border-color: transparent transparent transparent #333;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -6px;
+}
+
+.footerList{
+    padding: 0;
+}
+
+.menuList{
+    padding: 0;
+}
+
+
+.menuItem{
+    font-size: 0.875rem;
+    border-top: solid  1px #777;
+    text-align: left;
+    padding: 15px;
+}
+
+.menuItem:last-child{
+    border-bottom: solid  1px #777;
+}
+
+.copyright{
+    font-size: 0.750rem;
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .navi {
+        /* 横スクロールを表示 */
+        overflow-x: scroll;
+    }
+
+    .pickup{
+        flex-direction: column;
+    }
+    .pickup .article{
+        width:100%;
+        padding-bottom: 30px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .main{
+        width: 100%;
+    }
+
+    .aside{
+        width: 100%;
+        padding: 0;
+    }
+
+    .fotterContent{
+        flex-direction: column;
+    }
+
+    .footerSection{
+        width: 100%;
+    }
+
+}
